@@ -27,4 +27,10 @@ export default class bst {
       }
     }
   }
+
+  search(value) {
+    return true;
+  }
 }
+
+//TODO: add methods to rotate nodes and balance tree
