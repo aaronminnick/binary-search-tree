@@ -29,7 +29,20 @@ export default class bst {
   }
 
   search(value) {
-    return true;
+    if (this.root.data === value) {
+      return true;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (currentNode.data === value) {
+          return true;
+        } else if (currentNode.data > value && currentNode.left != null) {
+          currentNode = currentNode.left;
+        } else if (currentNode.data < value && currentNode.right != null) {
+          currentNode = currentNode.right;
+        } else return false;
+      }
+    }
   }
 }
 
